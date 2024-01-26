@@ -1,0 +1,40 @@
+{ 
+    "lwc": { 
+    "modules": [
+        {"npm": "lightning-base-components"},
+        { "dir": "$rootDir/src/modules" }
+        ] 
+    },
+    "routes": [
+        {
+            "id": "example",
+            "path": "/",
+            "rootComponent": "x/app",
+            "bootstrap": {
+                "syntheticShadow": true
+            }
+
+        }
+    ],
+    "assets": [
+        {
+            "alias": "assetsDir",
+            "dir": "$rootDir/src/assets",
+            "urlPath": "/assets"
+        },
+        {
+            "dir": "$rootDir/src/assets/fonts",
+            "urlPath": "/fonts"
+        },
+        {
+            "alias": "favicon",
+            "file": "$rootDir/src/assets/favicon.ico",
+            "urlPath": "/favicon.ico"
+        },
+        {
+            "alias": "style",
+            "file": "$rootDir/src/assets/styles/salesforce-lightning-design-system.css",
+            "urlPath": "/style.css"
+        }
+    ]
+}

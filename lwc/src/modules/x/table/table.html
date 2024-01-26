@@ -1,0 +1,116 @@
+<template><table aria-multiselectable="true" class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols" role="grid" aria-label="Example advanced table of Opportunities with cell focused">
+    <thead>
+      <tr class="slds-line-height_reset">
+        <th class="slds-text-align_right" scope="col" style="width:3.25rem">
+          <span id="column-group-header" class="slds-assistive-text">Choose a row</span>
+          <div class="slds-th__action slds-th__action_form">
+            <div class="slds-checkbox">
+              <input type="checkbox" name="options" id="checkbox-unique-id-297" value="checkbox-unique-id-297" tabindex="-1" aria-labelledby="check-select-all-label column-group-header" />
+              <label class="slds-checkbox__label" for="checkbox-unique-id-297" id="check-select-all-label">
+                <span class="slds-checkbox_faux"></span>
+                <span class="slds-form-element__label slds-assistive-text">Select All</span>
+              </label>
+            </div>
+          </div>
+        </th>
+        <th aria-sort="none" class="slds-is-resizable slds-is-sortable" scope="col">
+          <a class="slds-th__action slds-text-link_reset" href="#" role="button" tabindex="-1">
+            <span class="slds-assistive-text">Sort by: </span>
+            <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+              <span class="slds-truncate" title="Name">Id</span>
+              <span class="slds-icon_container slds-icon-utility-arrowdown">
+                <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                </svg>
+              </span>
+            </div>
+          </a>
+          <div class="slds-resizable">
+            <input type="range" aria-label="Name column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-540" max="1000" min="20" tabindex="-1" />
+            <span class="slds-resizable__handle">
+              <span class="slds-resizable__divider"></span>
+            </span>
+          </div>
+        </th>
+        <th aria-sort="none" class="slds-is-resizable slds-is-sortable" scope="col">
+          <a class="slds-th__action slds-text-link_reset" href="#" role="button" tabindex="-1">
+            <span class="slds-assistive-text">Sort by: </span>
+            <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+              <span class="slds-truncate" title="Account Name">Name</span>
+              <span class="slds-icon_container slds-icon-utility-arrowdown">
+                <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                </svg>
+              </span>
+            </div>
+          </a>
+          <div class="slds-resizable">
+            <input type="range" aria-label="Account Name column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-541" max="1000" min="20" tabindex="-1" />
+            <span class="slds-resizable__handle">
+              <span class="slds-resizable__divider"></span>
+            </span>
+          </div>
+        </th>
+        <th aria-sort="none" class="slds-is-resizable slds-is-sortable" scope="col">
+          <a class="slds-th__action slds-text-link_reset" href="#" role="button" tabindex="-1">
+            <span class="slds-assistive-text">Sort by: </span>
+            <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+              <span class="slds-truncate" title="Close Date">Price</span>
+              <span class="slds-icon_container slds-icon-utility-arrowdown">
+                <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                </svg>
+              </span>
+            </div>
+          </a>
+          <div class="slds-resizable">
+            <input type="range" aria-label="Close Date column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-542" max="1000" min="20" tabindex="-1" />
+            <span class="slds-resizable__handle">
+              <span class="slds-resizable__divider"></span>
+            </span>
+          </div>
+        </th>
+        
+        <th class="" scope="col" style="width:3.25rem">
+          <div class="slds-truncate slds-assistive-text" title="Actions">Actions</div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <template for:each={products} for:item="product">
+        <tr aria-selected="false" class="slds-hint-parent" key={product.Id}>
+            <td class="slds-text-align_right" role="gridcell">
+              <div class="slds-checkbox">
+                <input type="checkbox" name="options" id="checkbox-{product.Id}" value="checkbox-{product.Id}" tabindex="-1" aria-labelledby="check-button-label-01 column-group-header" />
+                <label class="slds-checkbox__label" for="checkbox-{product.Id}" id="check-button-label-{product.Id}">
+                  <span class="slds-checkbox_faux"></span>
+                  <span class="slds-form-element__label slds-assistive-text">Select item 1</span>
+                </label>
+              </div>
+            </td>
+            <th scope="row" tabindex="0">
+              <div class="slds-truncate" title="Acme - 1,200 Widgets">
+                <a href="#" tabindex="-1">{product.id}</a>
+              </div>
+            </th>
+            <td role="gridcell">
+              <div class="slds-truncate">{product.name}</div>
+            </td>
+            <td role="gridcell">
+              <div class="slds-truncate" >$ {product.price}</div>
+            </td>
+            <td role="gridcell">
+              <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="More actions for Acme - 1,200 Widgets">
+                <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                </svg>
+                <span class="slds-assistive-text">More actions for Acme - 1,200 Widgets</span>
+              </button>
+            </td>
+          </tr>
+      </template>
+      
+     
+    </tbody>
+  </table>
+</template>
