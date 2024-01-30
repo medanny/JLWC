@@ -19,11 +19,11 @@
     "assets": [
         {
             "alias": "assetsDir",
-            "dir": "$rootDir/src/assets",
+            "dir": "$rootDir/node_modules/@salesforce-ux/design-system/assets",
             "urlPath": "/assets"
         },
         {
-            "dir": "$rootDir/src/assets/fonts",
+            "dir": "$rootDir/node_modules/@salesforce-ux/design-system/assets/fonts",
             "urlPath": "/fonts"
         },
         {
@@ -33,7 +33,7 @@
         },
         {
             "alias": "style",
-            "file": "$rootDir/src/assets/styles/salesforce-lightning-design-system.css",
+            "file": "$rootDir/node_modules/@salesforce-ux/design-system/assets/styles/salesforce-lightning-design-system.css",
             "urlPath": "/style.css"
         }
     ]
